@@ -1,13 +1,5 @@
 from nicegui import ui
 
-from libs.bvcclasses import Role
-
-with ui.grid(columns=3).classes('w-full'):
-    with ui.column():
-        pass
-    with ui.column():
-        select = ui.select([role.value for role in Role], label='请选择：').props("borderless").classes('w-full')
-    with ui.column():
-        pass
+select = ui.select([1,2,4], label='请选择：').props("standard").classes('w-1/3 justify-center')
 
 ui.run()
